@@ -1,9 +1,10 @@
 # VitaPlug Gainer80
 
-VitaPlug Gainer80 is a macOS audio effect developed in C++17 with JUCE 9.0.3.
-It produces AU v2 (`.component`) and VST3 (`.vst3`) from one processor, one
-parameter model and one JUCE editor. The DSP layer is deliberately independent
-of host and UI code so it can later be reused by VitaDAW and other formats.
+VitaPlug Gainer80 is an audio effect developed in C++17 with JUCE 9.0.3. On
+macOS it produces AU v2 (`.component`) and VST3 (`.vst3`); Windows builds are
+explicitly VST3-only. Every format shares one processor, parameter model and
+JUCE editor. The DSP layer is deliberately independent of host and UI code so
+it can later be reused by VitaDAW and other formats.
 
 ## v0.1.0 — development foundation
 
@@ -101,6 +102,24 @@ macOS release has been exercised.
   claiming broad production compatibility.
 
 Logic loads the AU format; VST3 validation needs a compatible VST3 host.
+
+## Experimental Windows VST3 beta
+
+The GitHub Actions workflow **Windows VST3 x64** is started manually from the
+repository's Actions tab. It checks out JUCE 9.0.3 at the fixed commit, builds
+Release x64 with Visual Studio, runs CTest, validates the VST3 bundle layout
+and uploads a ZIP containing only `VitaPlug Gainer80.vst3` and its internal
+structure.
+
+After a successful run, download the `VitaPlug-Gainer80-v0.1.0-windows-x64-vst3`
+artifact, extract it without changing the bundle structure, and copy the
+resulting `VitaPlug Gainer80.vst3` folder to one of the VST3 locations accepted
+by the target host, commonly `%LOCALAPPDATA%\Programs\Common\VST3` for the
+current user. Then rescan plug-ins in a VST3-capable host.
+
+This is an experimental x64 beta until a successful Windows workflow run and a
+host smoke test are recorded. It is **not** a native Pro Tools/AAX build; Pro
+Tools requires a VST3-capable bridge/host path or a future AAX implementation.
 
 ## Licensing and distribution
 

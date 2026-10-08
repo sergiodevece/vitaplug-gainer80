@@ -31,6 +31,15 @@ juce_add_binary_data(VitaPlugGainer80Assets
         Resources/G80/v1/source/switch/switch-lever-lower.png
 )
 
+# AU is a macOS-only format. Keep both production formats on macOS, but make
+# Windows builds explicitly VST3-only so the same shared processor/UI can be
+# built on GitHub's Windows runner without asking JUCE to generate an AU.
+if (WIN32)
+    set(VITAPLUG_PLUGIN_FORMATS VST3)
+else()
+    set(VITAPLUG_PLUGIN_FORMATS AU VST3)
+endif()
+
 juce_add_plugin(VitaPlugGainer80
     COMPANY_NAME "VITAPLUG"
     COMPANY_WEBSITE "https://vitaplug.audio"
@@ -38,7 +47,7 @@ juce_add_plugin(VitaPlugGainer80
     BUNDLE_ID "com.vitaplug.gainer80"
     PLUGIN_MANUFACTURER_CODE Vtpl
     PLUGIN_CODE Gn80
-    FORMATS AU VST3
+    FORMATS ${VITAPLUG_PLUGIN_FORMATS}
     PRODUCT_NAME "VitaPlug Gainer80"
     PLUGIN_NAME "VitaPlug Gainer80"
     DESCRIPTION "Gain and 80 Hz bass enhancement"
