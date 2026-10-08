@@ -1,0 +1,47 @@
+# CMake and generated products
+/build/
+/dist/
+/package/
+/docs/
+/scripts/package-m2-beta.sh
+/cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+CTestTestfile.cmake
+Testing/
+compile_commands.json
+*.cmake.user
+
+# Installed/generated plug-in bundles and archives
+*.component/
+*.vst3/
+*.aupreset
+*.zip
+
+# Local recovery copies and machine-specific state
+/backups/
+/.DS_Store
+**/.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# JUCE is an exact external dependency; obtain it with the README command.
+/external/JUCE/
+
+# Local visual working material. Only the resources embedded by CMake are tracked.
+/Resources/G80/v1/preview/
+/Resources/G80/v1/tools/
+/Resources/G80/v1/PROMPTS.md
+/Resources/G80/v1/source/*.generated.png
+/Resources/G80/v1/source/switch/switch-lever.png
+/Resources/G80/v1/export/chassis-panel@2x.png
+/Resources/G80/v1/export/vu-housing@2x.png
+/Resources/G80/v1/export/knob-metal-body@2x.png
+
+# Local development logs and OS metadata
+*.log
+.Trashes
+.fseventsd
