@@ -9,7 +9,9 @@ permissions:
 jobs:
   build-windows-vst3:
     name: Build and test Windows x64 VST3
-    runs-on: windows-latest
+    # windows-latest did not expose a Visual Studio instance for this build.
+    # Pin the image that provides the requested VS 2022 x64 generator.
+    runs-on: windows-2022
 
     steps:
       - name: Check out VitaPlug Gainer80
