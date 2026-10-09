@@ -111,7 +111,8 @@ Release x64 with Visual Studio, runs CTest, validates the VST3 bundle layout
 and uploads a ZIP containing only `VitaPlug Gainer80.vst3` and its internal
 structure.
 
-After a successful run, download the `VitaPlug-Gainer80-v0.1.0-windows-x64-vst3`
+In this MIGUELOMENER Edition worktree, the workflow uploads the
+`VitaPlug-Gainer80-MIGUELOMENER-Edition-v0.1.0-windows-x64-vst3`
 artifact, extract it without changing the bundle structure, and copy the
 resulting `VitaPlug Gainer80.vst3` folder to one of the VST3 locations accepted
 by the target host, commonly `%LOCALAPPDATA%\Programs\Common\VST3` for the

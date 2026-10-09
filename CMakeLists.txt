@@ -21,7 +21,9 @@ add_subdirectory("${JUCE_DIR}" JUCE)
 # therefore never depends on Resources/ existing on the end user's Mac.
 juce_add_binary_data(VitaPlugGainer80Assets
     SOURCES
-        Resources/G80/v1/export/chassis-panel-typography-v2@2x.png
+        # The MigueloMener Edition owns its chassis typography as a distinct
+        # embedded resource.  The official G80 artwork remains untouched.
+        Resources/G80/v1/export/chassis-panel-typography-miguelomener@2x.png
         Resources/G80/v1/export/input-vu-housing@2x.png
         Resources/G80/v1/export/output-vu-housing@2x.png
         Resources/G80/v1/export/gain-knob-metal@2x.png

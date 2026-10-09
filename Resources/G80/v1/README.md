@@ -8,7 +8,7 @@ runtime path under `Resources/` is required on an end-user Mac.
 
 | File | Pixels | Alpha | Use |
 | --- | ---: | :---: | --- |
-| `export/chassis-panel-typography-v2@2x.png` | 1520 × 876 | no | Leather chassis, recessed green panel, aluminium plate, fixed decoration and footer |
+| `export/chassis-panel-typography-miguelomener@2x.png` | 1520 × 876 | no | MIGUELOMENER Edition chassis: leather, recessed green panel, aluminium plate and the four approved custom inscriptions |
 | `export/input-vu-housing@2x.png` | 320 × 220 | yes | INPUT bezel, paper, inner shadow and glass; no live scale or needle |
 | `export/output-vu-housing@2x.png` | 320 × 220 | yes | OUTPUT equivalent, same geometry |
 | `export/gain-knob-metal@2x.png` | 250 × 250 | yes | GAIN body without a fixed indicator |
@@ -63,3 +63,11 @@ Only the exported assets and switch layers listed above are tracked because
 they are the files embedded by CMake. Local previews, generated source imagery,
 prompts and helper tooling remain deliberately outside the development source
 release; none is required to build or run the plug-in.
+
+## MIGUELOMENER Edition typography
+
+This worktree embeds `chassis-panel-typography-miguelomener@2x.png` rather
+than the official G80 chassis typography. Its fixed inscriptions are
+`MIGUELOMENER`, `VitaPlug`, `Designed by SerxDev Vitalab`, and
+`Handcrafted for Miguelo, my brother`. No control geometry, parameter,
+processing or runtime asset path changes as part of this edition.

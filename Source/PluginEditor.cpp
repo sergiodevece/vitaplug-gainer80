@@ -341,8 +341,8 @@ void G80FattyModeSwitch::paint(juce::Graphics& g)
 
 VitaPlugGainer80AudioProcessorEditor::VitaPlugGainer80AudioProcessorEditor(VitaPlugGainer80AudioProcessor& p)
     : AudioProcessorEditor(&p), audioProcessor(p),
-      chassisImage(loadBundledPng(BinaryData::chassispaneltypographyv22x_png,
-                                  BinaryData::chassispaneltypographyv22x_pngSize)),
+      chassisImage(loadBundledPng(BinaryData::chassispaneltypographymiguelomener2x_png,
+                                  BinaryData::chassispaneltypographymiguelomener2x_pngSize)),
       inputVuImage(loadBundledPng(BinaryData::inputvuhousing2x_png, BinaryData::inputvuhousing2x_pngSize)),
       outputVuImage(loadBundledPng(BinaryData::outputvuhousing2x_png, BinaryData::outputvuhousing2x_pngSize)),
       gainKnobImage(loadBundledPng(BinaryData::gainknobmetal2x_png, BinaryData::gainknobmetal2x_pngSize)),

@@ -1,4 +1,4 @@
-name: Windows VST3 x64
+name: MIGUELOMENER Edition — Windows VST3 x64
 
 on:
   workflow_dispatch:
@@ -62,8 +62,8 @@ jobs:
             throw 'No x64 VST3 binary was found inside the bundle.'
           }
 
-          $stage = Join-Path $env:RUNNER_TEMP 'VitaPlug-Gainer80-v0.1.0-windows-x64'
-          $archive = Join-Path $env:RUNNER_TEMP 'VitaPlug-Gainer80-v0.1.0-windows-x64-vst3.zip'
+          $stage = Join-Path $env:RUNNER_TEMP 'VitaPlug-Gainer80-MIGUELOMENER-Edition-v0.1.0-windows-x64'
+          $archive = Join-Path $env:RUNNER_TEMP 'VitaPlug-Gainer80-MIGUELOMENER-Edition-v0.1.0-windows-x64-vst3.zip'
           New-Item -ItemType Directory -Path $stage -Force | Out-Null
           Copy-Item -LiteralPath $bundle.FullName -Destination (Join-Path $stage $bundle.Name) -Recurse
           Compress-Archive -Path (Join-Path $stage $bundle.Name) -DestinationPath $archive -Force
@@ -72,7 +72,7 @@ jobs:
       - name: Upload Windows VST3 x64 ZIP
         uses: actions/upload-artifact@v4
         with:
-          name: VitaPlug-Gainer80-v0.1.0-windows-x64-vst3
+          name: VitaPlug-Gainer80-MIGUELOMENER-Edition-v0.1.0-windows-x64-vst3
           path: ${{ env.VST3_ARCHIVE }}
           if-no-files-found: error
           retention-days: 14
