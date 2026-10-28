@@ -138,3 +138,7 @@ The repository tracks sources, tests, CMake files, scripts and the G80 assets
 compiled into the plug-in. It intentionally excludes build trees, local
 backups, generated bundles and the JUCE checkout; the exact JUCE revision and
 recovery commands above make the dependency reproducible.
+
+---
+
+**Author:** Sergio Devece · SerxDev — [Portfolio](https://serxdev.org)
